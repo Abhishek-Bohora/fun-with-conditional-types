@@ -11,7 +11,7 @@ type Person =
       age: "";
       speciality: "";
     }
-  | { type: "d"; name: ""; age: ""; field: "" };
+  | { type: "e"; name: ""; age: ""; field: "" };
 
 type Doctor = Person & { type: "d" };
 
