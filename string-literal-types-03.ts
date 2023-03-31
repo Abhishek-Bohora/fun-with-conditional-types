@@ -1,14 +1,31 @@
+//Narrowing string literal types
+function assertsNever(value: never) {
+  throw new Error("Unexpected");
+}
+
 function withAlignment(alignment: "center" | "left" | "right") {
-  if (alignment === "center") {
-    alignment;
-  } else if (alignment === "left") {
-    alignment;
-  } else if (alignment === "right") {
-    alignment;
-  } else {
-    alignment;
+  //narrowing literal types
+  //   if (alignment === "center" || alignment === "left") {
+  //     alignment;
+  //   } else if (alignment === "right") {
+  //     alignment;
+  //   } else {
+  //     alignment;
+  //   }
+
+  //using switch to narrow down
+  switch (alignment) {
+    case "center":
+      break;
+    case "left":
+      break;
+    case "right":
+      break;
+    default:
+      assertsNever(alignment);
   }
 }
+
 withAlignment("center");
 withAlignment("left");
 withAlignment("right");
