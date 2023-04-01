@@ -1,6 +1,6 @@
 //How can i represent an object that is either a Engineer or a Doctor ?
 //      => Use a Union
-
+export {};
 interface Engineer {
   name: string;
   age: string;
