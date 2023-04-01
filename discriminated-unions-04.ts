@@ -11,6 +11,7 @@ let person: Doctor | Engineer = {
   name: "john",
   speciality: "",
   field: "",
+  //if we give type "e" than it will give error in the speciality because speciality is not present in the type Engineer
 };
 
 function printPerson(p: Doctor | Engineer) {
