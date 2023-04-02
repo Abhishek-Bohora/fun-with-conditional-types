@@ -1,3 +1,5 @@
+export {};
+
 type Book = {
   name: string;
   fontSize: number;
