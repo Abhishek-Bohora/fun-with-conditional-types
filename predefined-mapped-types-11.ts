@@ -1,3 +1,4 @@
+export {};
 //partial - Creates a types with the same properties but with all properties optional.
 //Record - Creates a type with a given set of properties all of the same type.
 //Readonly - Creates a type with the same properties but with all properties readonly.
@@ -44,3 +45,12 @@ type Env = allReturnTypes<EnvGetters>;
 //              Valid values of U: string, number, typeof env
 //          U can depend on P
 //              Valid values of U:P, Env[P],T[P]
+
+type Record = {
+  readonly [P in keyof b]: b[P]; //appending readonly to type b
+};
+
+type b = {
+  a: boolean;
+  b: string;
+};
