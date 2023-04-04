@@ -38,3 +38,8 @@ type N = Extract<LooseBoolean, number>;
 
 //      "yes"|"no"|never|never
 //      "yes"|"no"
+
+/*************/
+//if you want to Disable the Distribution wrap the type parameter in the tuple [T]
+type OwnExtract<T, V> = [T] extends V ? T : never;
+type D = OwnExtract<"yes" | "no" | 0 | 1, string>; //now this gives us never because we disable the distribution
